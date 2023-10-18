@@ -1,0 +1,22 @@
+def check_palindrome(n):
+  temp = n
+  rev = 0
+  while n > 0:
+    dig = n % 10
+    rev = rev * 10 + dig
+    n = n // 10
+  return temp == rev
+
+
+def check_palindrome_word(word):
+  word = word.lower()
+  rev = word[::-1]
+  return word == rev
+
+
+# Example usage:
+
+print(check_palindrome(121))  # True
+print(check_palindrome(123))  # False
+print(check_palindrome_word("madam"))  # True
+print(check_palindrome_word("hello"))  # False
